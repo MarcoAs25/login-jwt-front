@@ -1,0 +1,42 @@
+.container{
+  width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)), url("~/src/assets/background-auth.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+mat-card{
+  width: 100%;
+  max-width: 580px;
+  min-height: 420px;
+}
+.img-logo{
+  max-width: 100px;
+  width: 100%;
+}
+button{
+  width: 100%;
+}
+.w100{
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn-gap{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

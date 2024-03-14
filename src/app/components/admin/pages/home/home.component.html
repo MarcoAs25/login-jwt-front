@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
+    <mat-icon *ngIf="drawer.opened">close</mat-icon>
+  </button>
+  <span class="title">Admin Pannel</span>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="container">
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list>
+      <div class="account-info">
+        <mat-icon class="account-icon" color="primary">account_circle</mat-icon>
+          <div>
+            Name
+          </div>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    content here
+    <button (click)="test()">Test</button>
+  </div>
+
+</mat-drawer-container>
