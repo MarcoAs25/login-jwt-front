@@ -1,3 +1,4 @@
+import { environment } from '../../../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, first, map, of } from 'rxjs';
@@ -15,9 +16,9 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  private readonly APICREATE = '/api/user';
-  private readonly APIAUTH = '/api/auth';
-  private readonly APITEST = '/api/test';
+  private readonly APICREATE = `${environment.backendUrl}/api/user`;
+  private readonly APIAUTH = `${environment.backendUrl}/api/auth`;
+  private readonly APITEST = `${environment.backendUrl}/api/test`;
   constructor(private httpClient: HttpClient, private router: Router) { }
 
   register(record: AuthRegisterRequest) {
